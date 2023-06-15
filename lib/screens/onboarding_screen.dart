@@ -1,5 +1,5 @@
-import 'package:boxitup/pages/home_page.dart';
 import 'package:boxitup/screens/content_model.dart';
+import 'package:boxitup/screens/welcome_screen.dart';
 import 'package:flutter/material.dart';
 
 class OnBoardingScreen extends StatefulWidget {
@@ -39,12 +39,12 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
           },
           itemBuilder: (_, i) {
             return Padding(
-              padding: const EdgeInsets.all(25),
+              padding: const EdgeInsets.all(20),
               child: Column(
                 children: [
                   Image.asset(
                     contents[i].image,
-                    height: 400,
+                    height: 380,
                   ),
                   Text(
                     textAlign: TextAlign.center,
@@ -55,13 +55,13 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
                     ),
                   ),
                   const SizedBox(
-                    height: 13,
+                    height: 10,
                   ),
                   Text(
                     textAlign: TextAlign.center,
                     contents[i].description,
                     style: const TextStyle(
-                      fontSize: 15,
+                      fontSize: 18,
                     ),
                   ),
                 ],
@@ -87,7 +87,7 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
               onPressed: () {
                 if (currentIndex == contents.length - 1) {
                   Navigator.push(context,
-                      MaterialPageRoute(builder: (_) => const HomePage()));
+                      MaterialPageRoute(builder: (_) => const WelcomeScreen()));
                 }
                 _controller.nextPage(
                   duration: const Duration(milliseconds: 100),
@@ -97,7 +97,7 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
               shape: const RoundedRectangleBorder(
                   borderRadius: BorderRadius.all(Radius.circular(45.0))),
               child: Text(
-                currentIndex == contents.length - 1 ? "Continue" : "Next",
+                currentIndex == contents.length - 1 ? "Get Started" : "Next",
                 style: const TextStyle(
                   color: Colors.white,
                 ),
