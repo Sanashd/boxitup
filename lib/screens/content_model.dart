@@ -13,7 +13,7 @@ List<UnboardingContent> contents = [
     image: "assets/images/Take Away-pana (1).png",
     title: "Live Package Updates",
     description:
-        "Follow your package's journey from pickup to delivery, ensuring peace of mind and timely updates throughout the process.",
+        "Follow your package's journey, ensuring peace of mind and timely updates throughout the process.",
   ),
   UnboardingContent(
     image: "assets/images/Time management-pana.png",

@@ -1,5 +1,6 @@
 import 'package:boxitup/screens/forgot_password.dart';
 import 'package:boxitup/screens/home_screen.dart';
+import 'package:boxitup/screens/signup_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
@@ -138,24 +139,31 @@ class _LoginScreenState extends State<LoginScreen> {
                 const SizedBox(
                   height: 85,
                 ),
-                const Row(
+                Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    Text("Don't have an account?",
+                    const Text("Don't have an account?",
                         style: TextStyle(
                           color: Color(0xff1E232C),
                           fontSize: 15,
                         )),
-                    Text("  Register Now",
-                        style: TextStyle(
-                          color: Color.fromARGB(255, 215, 116, 9),
-                          fontSize: 15,
-                        )),
+                    InkWell(
+                      onTap: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (_) => const SignUpScreen()));
+                      },
+                      child: const Text("  SignUp Now",
+                          style: TextStyle(
+                            color: Color.fromARGB(255, 215, 116, 9),
+                            fontSize: 15,
+                          )),
+                    ),
                   ],
                 ),
               ]))),
     ));
-
   }
 }
 

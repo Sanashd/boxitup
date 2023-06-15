@@ -11,7 +11,7 @@ class CustomizedTextfield extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.all(10.0),
+      padding: const EdgeInsets.all(09.0),
       child: TextField(
         keyboardType: isPassword!
             ? TextInputType.visiblePassword
