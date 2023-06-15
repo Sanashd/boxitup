@@ -1,4 +1,4 @@
-import 'package:boxitup/pages/home_page.dart';
+import 'package:boxitup/screens/onboarding_screen.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -14,13 +14,13 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
         themeMode: ThemeMode.light,
         theme: ThemeData(
-          primarySwatch: Colors.deepPurple,
+          primarySwatch: Colors.purple,
           // fontFamily: GoogleFonts.lato().fontFamily
         ),
         debugShowCheckedModeBanner: false,
         // darkTheme: ThemeData(primarySwatch: Colors.green
         routes: {
-          "/": (context) => const HomePage(),
+          "/": (context) => const OnBoardingScreen(),
         });
   }
 }
