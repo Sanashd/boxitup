@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "684685457024",
+    "project_id": "boxitup",
+    "storage_bucket": "boxitup.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:684685457024:android:fb0cd64176cd6ac524d865",
+        "android_client_info": {
+          "package_name": "com.example.boxitup"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "684685457024-4oe7nr83ae2v3n998gt191j68ijjak9s.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCI5NLnRnZMTTUfwR58jEMFx_HJ66pGV6U"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "684685457024-4oe7nr83ae2v3n998gt191j68ijjak9s.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "684685457024-ktff8nd4fg8mo4luj727rjokqq8smn7d.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.boxitup"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
