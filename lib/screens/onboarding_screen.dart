@@ -27,82 +27,91 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
 
   Widget build(BuildContext context) {
     return Scaffold(
-        body: Column(children: [
-      Expanded(
-        child: PageView.builder(
-          controller: _controller,
-          itemCount: contents.length,
-          onPageChanged: (int index) {
-            setState(() {
-              currentIndex = index;
-            });
-          },
-          itemBuilder: (_, i) {
-            return Padding(
-              padding: const EdgeInsets.all(20),
-              child: Column(
-                children: [
-                  Image.asset(
-                    contents[i].image,
-                    height: 380,
-                  ),
-                  Text(
-                    textAlign: TextAlign.center,
-                    contents[i].title,
-                    style: const TextStyle(
-                      fontSize: 29,
-                      fontWeight: FontWeight.bold,
-                    ),
-                  ),
-                  const SizedBox(
-                    height: 10,
-                  ),
-                  Text(
-                    textAlign: TextAlign.center,
-                    contents[i].description,
-                    style: const TextStyle(
-                      fontSize: 18,
-                    ),
-                  ),
-                ],
-              ),
-            );
-          },
-        ),
-      ),
-      Container(
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: List.generate(
-              contents.length, (index) => buildDot(index, context)),
-        ),
-      ),
-      Container(
-          height: 50,
-          margin: const EdgeInsets.all(40),
-          width: 170,
-          // color: Theme.of(context).primaryColor,
-          child: FloatingActionButton(
-              backgroundColor: Colors.deepPurple,
-              onPressed: () {
-                if (currentIndex == contents.length - 1) {
-                  Navigator.push(context,
-                      MaterialPageRoute(builder: (_) => const WelcomeScreen()));
-                }
-                _controller.nextPage(
-                  duration: const Duration(milliseconds: 100),
-                  curve: Curves.bounceIn,
-                );
-              },
-              shape: const RoundedRectangleBorder(
-                  borderRadius: BorderRadius.all(Radius.circular(45.0))),
-              child: Text(
-                currentIndex == contents.length - 1 ? "Get Started" : "Next",
-                style: const TextStyle(
-                  color: Colors.white,
+        body: SizedBox(
+            height: MediaQuery.of(context).size.height,
+            width: double.infinity,
+            child: SingleChildScrollView(
+                child: Column(children: [
+              Expanded(
+                child: PageView.builder(
+                  controller: _controller,
+                  itemCount: contents.length,
+                  onPageChanged: (int index) {
+                    setState(() {
+                      currentIndex = index;
+                    });
+                  },
+                  itemBuilder: (_, i) {
+                    return Padding(
+                      padding: const EdgeInsets.all(20),
+                      child: Column(
+                        children: [
+                          Image.asset(
+                            contents[i].image,
+                            height: 380,
+                          ),
+                          Text(
+                            textAlign: TextAlign.center,
+                            contents[i].title,
+                            style: const TextStyle(
+                              fontSize: 29,
+                              fontWeight: FontWeight.bold,
+                            ),
+                          ),
+                          const SizedBox(
+                            height: 10,
+                          ),
+                          Text(
+                            textAlign: TextAlign.center,
+                            contents[i].description,
+                            style: const TextStyle(
+                              fontSize: 18,
+                            ),
+                          ),
+                        ],
+                      ),
+                    );
+                  },
                 ),
-              )))
-    ]));
+              ),
+              Container(
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: List.generate(
+                      contents.length, (index) => buildDot(index, context)),
+                ),
+              ),
+              Container(
+                  height: 50,
+                  margin: const EdgeInsets.all(40),
+                  width: 170,
+                  // color: Theme.of(context).primaryColor,
+                  child: FloatingActionButton(
+                      backgroundColor: Colors.deepPurple,
+                      onPressed: () {
+                        if (currentIndex == contents.length - 1) {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (_) => const WelcomeScreen()));
+                        }
+                        _controller.nextPage(
+                          duration: const Duration(milliseconds: 100),
+                          curve: Curves.bounceIn,
+                        );
+                      },
+                      shape: const RoundedRectangleBorder(
+                          borderRadius:
+                              BorderRadius.all(Radius.circular(45.0))),
+                      child: Text(
+                        currentIndex == contents.length - 1
+                            ? "Get Started"
+                            : "Next",
+                        style: const TextStyle(
+                          color: Colors.white,
+                        ),
+                      )))
+            ]))));
   }
 
   Container buildDot(int index, BuildContext context) {
