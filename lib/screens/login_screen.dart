@@ -84,7 +84,7 @@ class _LoginScreenState extends State<LoginScreen> {
                 ),
                 CustomizedButton(
                   buttonText: "Login",
-                  buttonColor: Colors.black,
+                  buttonColor: const Color.fromARGB(232, 22, 149, 41),
                   textColor: Colors.white,
                   onPressed: () {
                     Navigator.push(
@@ -145,7 +145,7 @@ class _LoginScreenState extends State<LoginScreen> {
                     const Text("Don't have an account?",
                         style: TextStyle(
                           color: Color(0xff1E232C),
-                          fontSize: 15,
+                          fontSize: 16,
                         )),
                     InkWell(
                       onTap: () {
@@ -156,9 +156,9 @@ class _LoginScreenState extends State<LoginScreen> {
                       },
                       child: const Text("  SignUp Now",
                           style: TextStyle(
-                            color: Color.fromARGB(255, 215, 116, 9),
-                            fontSize: 15,
-                          )),
+                              color: Color.fromARGB(232, 22, 149, 41),
+                              fontSize: 16,
+                              fontWeight: FontWeight.bold)),
                     ),
                   ],
                 ),
@@ -166,4 +166,3 @@ class _LoginScreenState extends State<LoginScreen> {
     ));
   }
 }
-

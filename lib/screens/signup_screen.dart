@@ -48,7 +48,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
               ),
               const Padding(
                 padding: EdgeInsets.all(04.0),
-                child: Text("Hello!  Register to get \nStarted",
+                child: Text("Register to get Started!",
                     style: TextStyle(
                       color: Colors.black,
                       fontSize: 30,
@@ -77,7 +77,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
               ),
               CustomizedButton(
                 buttonText: "Sign Up",
-                buttonColor: Colors.black,
+                buttonColor: const Color.fromARGB(232, 22, 149, 41),
                 textColor: Colors.white,
                 onPressed: ()
 
@@ -144,7 +144,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                     ]),
               ),
               const SizedBox(
-                height: 20,
+                height: 13,
               ),
               // Padding(
               //   padding: const EdgeInsets.fromLTRB(48, 8, 8, 8.0),
@@ -166,9 +166,9 @@ class _SignUpScreenState extends State<SignUpScreen> {
                     },
                     child: const Text("  Login Now",
                         style: TextStyle(
-                          color: Color.fromARGB(255, 236, 120, 18),
-                          fontSize: 15,
-                        )),
+                            color: Color.fromARGB(232, 22, 149, 41),
+                            fontSize: 15,
+                            fontWeight: FontWeight.bold)),
                   ),
                 ],
               ),

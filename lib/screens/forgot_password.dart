@@ -17,7 +17,7 @@ class _ForgotPasswordState extends State<ForgotPassword> {
   Widget build(BuildContext context) {
     return SafeArea(
         child: Scaffold(
-      body: SizedBox (
+      body: SizedBox(
         height: MediaQuery.of(context).size.height,
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
@@ -48,7 +48,7 @@ class _ForgotPasswordState extends State<ForgotPassword> {
                   )),
             ),
             const Padding(
-              padding:  EdgeInsets.all(8.0),
+              padding: EdgeInsets.all(8.0),
               child: Text(
                   "Dont worry it occurs to us all. We will send you a link to reset your password.",
                   style: TextStyle(
@@ -64,7 +64,7 @@ class _ForgotPasswordState extends State<ForgotPassword> {
             ),
             CustomizedButton(
               buttonText: "Send Code",
-              buttonColor: Colors.black,
+              buttonColor: const Color.fromARGB(232, 22, 149, 41),
               textColor: Colors.white,
               onPressed: () {
                 Navigator.pop(context);

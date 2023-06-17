@@ -1,5 +1,7 @@
 import 'package:boxitup/firebase_options.dart';
+import 'package:boxitup/screens/home_screen.dart';
 import 'package:boxitup/screens/onboarding_screen.dart';
+
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 
@@ -10,11 +12,32 @@ void main() async {
     options: DefaultFirebaseOptions.currentPlatform,
   );
 
-  runApp(const MyApp());
+  runApp(MyApp());
 }
 
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+class MyApp extends StatefulWidget {
+  MyApp({super.key});
+
+  @override
+  State<MyApp> createState() => _MyAppState();
+}
+
+class _MyAppState extends State<MyApp> {
+  MaterialColor mycolor = const MaterialColor(
+    0xFF558B2F,
+    <int, Color>{
+      50: Color.fromARGB(232, 22, 149, 41),
+      100: Color.fromARGB(232, 22, 149, 41),
+      200: Color.fromARGB(232, 22, 149, 41),
+      300: Color.fromARGB(232, 22, 149, 41),
+      400: Color.fromARGB(232, 22, 149, 41),
+      500: Color.fromARGB(232, 22, 149, 41),
+      600: Color.fromARGB(232, 22, 149, 41),
+      700: Color.fromARGB(232, 22, 149, 41),
+      800: Color.fromARGB(232, 22, 149, 41),
+      900: Color.fromARGB(232, 22, 149, 41),
+    },
+  );
 
   // This widget is the root of your application.
   @override
@@ -22,7 +45,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
         themeMode: ThemeMode.light,
         theme: ThemeData(
-          primarySwatch: Colors.purple,
+          primarySwatch: mycolor,
           // fontFamily: GoogleFonts.lato().fontFamily
         ),
         debugShowCheckedModeBanner: false,

@@ -31,17 +31,16 @@ class WelcomeScreen extends StatelessWidget {
                 height: 250,
                 width: 250,
                 child: Image(
-                  
                     alignment: Alignment.center,
                     image: AssetImage(
-                      "assets/images/logo.jpg",
+                      "assets/images/logo.png",
                     ),
                     fit: BoxFit.cover),
               ),
               const SizedBox(height: 10),
               CustomizedButton(
                 buttonText: "Login",
-                buttonColor: Colors.black,
+                buttonColor: const Color.fromARGB(232, 22, 149, 41),
                 textColor: Colors.white,
                 onPressed: () {
                   Navigator.push(context,
@@ -50,6 +49,7 @@ class WelcomeScreen extends StatelessWidget {
               ),
               CustomizedButton(
                 buttonText: "Register",
+                border: Border.all(width: 1, color: Colors.black),
                 buttonColor: Colors.white,
                 textColor: Colors.black,
                 onPressed: () {
