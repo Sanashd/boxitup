@@ -12,11 +12,11 @@ void main() async {
     options: DefaultFirebaseOptions.currentPlatform,
   );
 
-  runApp(MyApp());
+  runApp(const MyApp());
 }
 
 class MyApp extends StatefulWidget {
-  MyApp({super.key});
+  const MyApp({super.key});
 
   @override
   State<MyApp> createState() => _MyAppState();
@@ -51,7 +51,7 @@ class _MyAppState extends State<MyApp> {
         debugShowCheckedModeBanner: false,
         // darkTheme: ThemeData(primarySwatch: Colors.green
         routes: {
-          "/": (context) => const OnBoardingScreen(),
+          "/": (context) => const HomePage(),
         });
   }
 }
