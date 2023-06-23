@@ -1,6 +1,10 @@
 import 'package:boxitup/firebase_options.dart';
-import 'package:boxitup/screens/home_screen.dart';
+import 'package:boxitup/screens/content_model.dart';
+import 'package:boxitup/screens/login_screen.dart';
 import 'package:boxitup/screens/onboarding_screen.dart';
+
+import 'package:boxitup/screens/welcome_screen.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
@@ -43,15 +47,26 @@ class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-        themeMode: ThemeMode.light,
-        theme: ThemeData(
-          primarySwatch: mycolor,
-          // fontFamily: GoogleFonts.lato().fontFamily
-        ),
-        debugShowCheckedModeBanner: false,
-        // darkTheme: ThemeData(primarySwatch: Colors.green
-        routes: {
-          "/": (context) => const HomePage(),
-        });
+      themeMode: ThemeMode.light,
+      theme: ThemeData(
+        primarySwatch: mycolor,
+        // fontFamily: GoogleFonts.lato().fontFamily
+      ),
+      debugShowCheckedModeBanner: false,
+      // darkTheme: ThemeData(primarySwatch: Colors.green
+      // routes: {
+      //   "/": (context) => const OnBoardingScreen(),
+      // },
+      home: StreamBuilder(
+        stream: FirebaseAuth.instance.authStateChanges(),
+        builder: (context, snapshot) {
+          if (snapshot.hasData) {
+            return LoginScreen();
+          } else {
+            return const OnBoardingScreen();
+          }
+        },
+      ),
+    );
   }
 }

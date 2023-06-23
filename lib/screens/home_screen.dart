@@ -1,3 +1,4 @@
+import 'package:boxitup/screens/profile_screen.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 
@@ -66,42 +67,9 @@ class HomePage extends StatelessWidget {
           items: imageSliders,
         ),
 
-        // body: CustomScrollView(
-        //   slivers: <Widget>[
-        //     SliverAppBar(
-        //       title: const Padding(
-        //         padding: EdgeInsets.only(
-        //           left: 24,
-        //         ),
-        //         child: Text(
-        //           "Home",
-        //           style: TextStyle(
-        //             fontSize: 20,
-        //             fontWeight: FontWeight.bold,
-        //           ),
-        //         ),
-        //       ),
-        //       centerTitle: true,
-        //       floating: true,
-        //       snap: false,
-        //       titleSpacing: 0,
-        //       actions: const [
-        //         Padding(
-        //             padding: EdgeInsets.only(right: 24),
-        //             child: Icon(Icons.notifications))
-        //       ],
-        //       shadowColor: Colors.transparent,
-        //       expandedHeight: 20,
-        //       backgroundColor: Theme.of(context).appBarTheme.backgroundColor,
-        //       shape: const RoundedRectangleBorder(
-        //           borderRadius: BorderRadius.only(
-        //         bottomLeft: Radius.circular(16),
-        //         bottomRight: Radius.circular(16),
-        //       )),
-        //     )
-        //   ],
+        
 
-        // ),
+        
 
         drawer: Drawer(
           // Add a ListView to the drawer. This ensures the user can scroll
@@ -172,10 +140,20 @@ class HomePage extends StatelessWidget {
                     color: Color.fromARGB(232, 22, 149, 41),
                   ),
                   title: const Text('Settings'),
-                  onTap: () {},
+                  onTap: () {
+                     Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => const ProfilePage()));
+
+
+                  },
                 ),
               ]),
-        ));
+        )
+
+        
+        );
   }
 }
 

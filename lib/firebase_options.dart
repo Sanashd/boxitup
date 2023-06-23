@@ -44,40 +44,40 @@ class DefaultFirebaseOptions {
   }
 
   static const FirebaseOptions web = FirebaseOptions(
-    apiKey: 'AIzaSyDfxbX_TCMLvHsjY3ipsXnr9pc9R6zZZ-s',
-    appId: '1:684685457024:web:eb5ef62e211ba90c24d865',
-    messagingSenderId: '684685457024',
-    projectId: 'boxitup',
-    authDomain: 'boxitup.firebaseapp.com',
-    storageBucket: 'boxitup.appspot.com',
-    measurementId: 'G-59E4M4HE0N',
+    apiKey: 'AIzaSyBtidP2T0ad5erWzgRYZzeBJexOt5ZsHEM',
+    appId: '1:701834425864:web:93844e7031ef6f91fc03bd',
+    messagingSenderId: '701834425864',
+    projectId: 'admin-dashboard-8305c',
+    authDomain: 'admin-dashboard-8305c.firebaseapp.com',
+    storageBucket: 'admin-dashboard-8305c.appspot.com',
+    measurementId: 'G-KQ69W8Z1PQ',
   );
 
   static const FirebaseOptions android = FirebaseOptions(
-    apiKey: 'AIzaSyCI5NLnRnZMTTUfwR58jEMFx_HJ66pGV6U',
-    appId: '1:684685457024:android:fb0cd64176cd6ac524d865',
-    messagingSenderId: '684685457024',
-    projectId: 'boxitup',
-    storageBucket: 'boxitup.appspot.com',
+    apiKey: 'AIzaSyB0Uwp46-KXliHU94UBY3WcwIB-hnF_neY',
+    appId: '1:701834425864:android:0351980451e02d28fc03bd',
+    messagingSenderId: '701834425864',
+    projectId: 'admin-dashboard-8305c',
+    storageBucket: 'admin-dashboard-8305c.appspot.com',
   );
 
   static const FirebaseOptions ios = FirebaseOptions(
-    apiKey: 'AIzaSyBcy-F-u9j-umIvVlW01jTM5_E6leZCyjg',
-    appId: '1:684685457024:ios:bfc08d2622108d1324d865',
-    messagingSenderId: '684685457024',
-    projectId: 'boxitup',
-    storageBucket: 'boxitup.appspot.com',
-    iosClientId: '684685457024-ktff8nd4fg8mo4luj727rjokqq8smn7d.apps.googleusercontent.com',
+    apiKey: 'AIzaSyDHGktH4WLv3WE_v37gvqTXcDyipFhLNYI',
+    appId: '1:701834425864:ios:3a431a910c5b625dfc03bd',
+    messagingSenderId: '701834425864',
+    projectId: 'admin-dashboard-8305c',
+    storageBucket: 'admin-dashboard-8305c.appspot.com',
+    iosClientId: '701834425864-qgspk6u116pbvkkv3ha5dshe1a30t2sh.apps.googleusercontent.com',
     iosBundleId: 'com.example.boxitup',
   );
 
   static const FirebaseOptions macos = FirebaseOptions(
-    apiKey: 'AIzaSyBcy-F-u9j-umIvVlW01jTM5_E6leZCyjg',
-    appId: '1:684685457024:ios:99691a122174e3c324d865',
-    messagingSenderId: '684685457024',
-    projectId: 'boxitup',
-    storageBucket: 'boxitup.appspot.com',
-    iosClientId: '684685457024-vguhj2b00gso0tp1bghhgc5vaa8q742p.apps.googleusercontent.com',
+    apiKey: 'AIzaSyDHGktH4WLv3WE_v37gvqTXcDyipFhLNYI',
+    appId: '1:701834425864:ios:5bf0623cedba2996fc03bd',
+    messagingSenderId: '701834425864',
+    projectId: 'admin-dashboard-8305c',
+    storageBucket: 'admin-dashboard-8305c.appspot.com',
+    iosClientId: '701834425864-7p4ptv22c189h4b7t7olsi58i9ubgj2q.apps.googleusercontent.com',
     iosBundleId: 'com.example.boxitup.RunnerTests',
   );
 }

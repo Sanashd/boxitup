@@ -1,4 +1,7 @@
+import 'package:boxitup/screens/home_screen.dart';
 import 'package:boxitup/screens/login_screen.dart';
+import 'package:boxitup/services/firebase_auth_service.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
@@ -79,24 +82,19 @@ class _SignUpScreenState extends State<SignUpScreen> {
                 buttonText: "Sign Up",
                 buttonColor: const Color.fromARGB(232, 22, 149, 41),
                 textColor: Colors.white,
-                onPressed: ()
+                onPressed: () async {
+                  try {
+                    await FirebaseAuthService().signup(
+                        _emailController.text.trim(),
+                        _passwordController.text.trim());
 
-                    // async
-                    {
-                  // try {
-                  //   await FirebaseAuthService().signup(
-                  //       _emailController.text.trim(),
-                  //       _passwordController.text.trim());
+                    if (!mounted) return;
 
-                  //   if (!mounted) return;
-
-                  Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                          builder: (context) => const LoginScreen()));
-                  //     } on FirebaseException catch (e) {
-                  //       debugPrint(e.message);
-                  //     }
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (context) => LoginScreen()));
+                  } on FirebaseException catch (e) {
+                    debugPrint(e.message);
+                  }
 
                   //     // Navigator.push(context,
                   //     //     MaterialPageRoute(builder: (_) => const LoginScreen()));
@@ -127,20 +125,33 @@ class _SignUpScreenState extends State<SignUpScreen> {
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: [
                       Container(
-                        height: 50,
-                        width: 70,
-                        decoration: BoxDecoration(
-                          border: Border.all(color: Colors.black, width: 1),
-                          borderRadius: BorderRadius.circular(10),
-                        ),
-                        child: IconButton(
-                          icon: const Icon(
-                            FontAwesomeIcons.google,
-                            // color: Colors.blue,
+                          height: 50,
+                          width: 70,
+                          decoration: BoxDecoration(
+                            border: Border.all(color: Colors.black, width: 1),
+                            borderRadius: BorderRadius.circular(10),
                           ),
-                          onPressed: () {},
-                        ),
-                      ),
+                          child: IconButton(
+                            icon: const Icon(
+                              FontAwesomeIcons.google,
+                              // color: Colors.blue,
+                            ),
+                            onPressed: () async {
+                              await FirebaseAuthService().logininwithgoogle();
+
+                              if (FirebaseAuth.instance.currentUser != null) {
+                                if (!mounted) return;
+
+                                Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                        builder: (context) =>
+                                            const HomePage()));
+                              } else {
+                                throw Exception("Error");
+                              }
+                            },
+                          )),
                     ]),
               ),
               const SizedBox(
@@ -159,10 +170,8 @@ class _SignUpScreenState extends State<SignUpScreen> {
                       )),
                   InkWell(
                     onTap: () {
-                      Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (_) => const LoginScreen()));
+                      Navigator.push(context,
+                          MaterialPageRoute(builder: (_) => LoginScreen()));
                     },
                     child: const Text("  Login Now",
                         style: TextStyle(

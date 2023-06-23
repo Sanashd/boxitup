@@ -1,41 +1,34 @@
 {
   "project_info": {
-    "project_number": "684685457024",
-    "project_id": "boxitup",
-    "storage_bucket": "boxitup.appspot.com"
+    "project_number": "701834425864",
+    "project_id": "admin-dashboard-8305c",
+    "storage_bucket": "admin-dashboard-8305c.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:684685457024:android:fb0cd64176cd6ac524d865",
+        "mobilesdk_app_id": "1:701834425864:android:0351980451e02d28fc03bd",
         "android_client_info": {
           "package_name": "com.example.boxitup"
         }
       },
       "oauth_client": [
         {
-          "client_id": "684685457024-4oe7nr83ae2v3n998gt191j68ijjak9s.apps.googleusercontent.com",
+          "client_id": "701834425864-cvjqvg9aseuledtdp36jrhkq13ncehrl.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyCI5NLnRnZMTTUfwR58jEMFx_HJ66pGV6U"
+          "current_key": "AIzaSyB0Uwp46-KXliHU94UBY3WcwIB-hnF_neY"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "684685457024-4oe7nr83ae2v3n998gt191j68ijjak9s.apps.googleusercontent.com",
+              "client_id": "701834425864-2e9v802lf6rta7hcc4nofbi4bafqcqh7.apps.googleusercontent.com",
               "client_type": 3
-            },
-            {
-              "client_id": "684685457024-ktff8nd4fg8mo4luj727rjokqq8smn7d.apps.googleusercontent.com",
-              "client_type": 2,
-              "ios_info": {
-                "bundle_id": "com.example.boxitup"
-              }
             }
           ]
         }

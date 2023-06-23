@@ -44,7 +44,7 @@ class WelcomeScreen extends StatelessWidget {
                 textColor: Colors.white,
                 onPressed: () {
                   Navigator.push(context,
-                      MaterialPageRoute(builder: (_) => const LoginScreen()));
+                      MaterialPageRoute(builder: (_) =>  LoginScreen()));
                 },
               ),
               CustomizedButton(
